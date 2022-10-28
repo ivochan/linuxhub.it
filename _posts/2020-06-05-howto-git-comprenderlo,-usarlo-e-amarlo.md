@@ -447,19 +447,19 @@ git fetch [nomerepository]
 
 Lo status prende diverse parametri che possono essere più o meno utili, eccone alcuni:
 
-- `-b nomebranch`: visualizza informazioni su quel branch
-- `--short`: visualizza giusto i file con il tipo di modifica (+ per aggiunto, m per modificato ...)
-- `--ignored`: visualizza i file ignorati
+- `-b nomebranch`, che permette di visualizzare delle informazioni su quel branch;
+- `--short`, che indica giusto i file con il tipo di modifica (+ per aggiunto, m per modificato ...);
+- `--ignored`, che mostra i file ignorati;
 
-#### diff
+#### Il comando diff
 
-Informazioni più dettagliate, che riguardano le righe modificate nei vari file, potrebbe darlo il comando **diff**:
+Si possono ottenere delle informazioni più dettagliate, che riguardano le righe modificate nei vari file, tramite il comando **diff**:
 
 ```bash
 git diff nomerepository/nomebranch
 ```
 
-Si può usare anche per isolare nello specifico un file o una cartella:
+Si può usare anche per isolare, nello specifico, un file o una cartella:
 
 ```bash
 git diff nomerepository/nomebranch -- nomefile
@@ -471,7 +471,7 @@ Lo stesso comando può essere utilizzato anche se si vuole vedere lo stato delle
 git diff nomefile
 ```
 
-Nell'esempio cui sopra, se il file "*nomefile*" è stato modificato aggiungendo una riga, ad esempio apparirà un output con questo stile:
+Ad esempio, se il file "*nomefile*" è stato modificato aggiungendo una riga apparirà un output con questo stile:
 
 ```diff
 diff --git a/nomefile b/nomefile
@@ -482,17 +482,17 @@ index e69de29..d72af31 100644
 +asd
 ```
 
-Dove accanto i *più* son visualizzate le aggiunte.
+Dove accanto i segni "+" sono visualizzate le aggiunte.
 
 ## Un uso più consapevole
 
-**git** è uno strumento molto potente, nato soprattutto per la condivisione di codice in team. Un uso solitario dello strumento è sì, <u>una buona pratica</u>, ma non ne rivela le *vere potenzialità del software*.
+**Git** è uno strumento molto potente, nato soprattutto per la condivisione di codice in team. Un utilizzo solitario dello strumento è sì <u>una buona pratica</u>, ma non rivela le *vere potenzialità del software*.
 
 ### I branch
 
-Il primo passo verso la strutturazione di un buon progetto è <u>delinearne i branch</u>. Per dirla in breve, se si guarda un progetto *come una linea ferroviaria che porta un enorme carico da un punto A ad un punto B con un treno*, i branch permettono di **dividere quel carico su più linee** che *si diramano dal punto A o successivamente*, <u>ma che infine arrivano sempre al punto B</u>.
+Il primo passo verso la strutturazione di un buon progetto è <u>delinearne i branch</u>. Per dirla in breve, se si guarda un progetto *come una linea ferroviaria che porta un enorme carico, da un punto A ad un punto B, con un treno*, i branch permettono di **dividere quel carico su più linee**,che *si diramano dal punto A o successivamente*, <u>ma che infine arrivano sempre al punto B</u>.
 
-I vantaggi potrebbero essere quelli di evitare che un incidente rischi di rovinare tutto il carico ma che ne tocchi solo una parte, o ancora che alcuni percorsi permettano di trattare un determinato tipo di carico meglio di altri, o quello di utilizzare più treni, così da non affaticarne solo uno, dividendo i tempi e molto altro.
+I vantaggi potrebbero essere quelli di evitare che un incidente rischi di rovinare tutto il carico, compromettendone soltanto una parte, o ancora che alcuni percorsi permettano di trattare un determinato tipo di carico meglio di altri, o quello di utilizzare più treni, così da non affaticarne solo uno, riducendo i tempi e molto altro.
 
 Nel caso in cui la similitudine non vi fosse completamente chiara, seguirà un maggiore chiarimento di a cosa può servire dividere a branch ?
 
